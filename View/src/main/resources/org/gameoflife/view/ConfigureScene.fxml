@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox alignment="TOP_CENTER" prefHeight="576.0" prefWidth="245.0" spacing="20.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.gameoflife.view.ConfigureController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <children>
+      <Text fx:id="heightTxt" strokeType="OUTSIDE" strokeWidth="0.0" text="podaj wysokość mapy" />
+      <TextArea id="size" fx:id="sizeField" prefHeight="33.0" prefWidth="70.0" promptText="podaj wielkosc planszy">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <font>
+            <Font size="10.0" />
+         </font>
+      </TextArea>
+      <Text fx:id="widthTxt" strokeType="OUTSIDE" strokeWidth="0.0" text="podaj szerokość mapy" />
+      <TextArea id="size" fx:id="widthField" prefHeight="33.0" prefWidth="70.0" promptText="podaj wielkosc planszy">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <font>
+            <Font size="10.0" />
+         </font>
+      </TextArea>
+      <Text fx:id="compacTxt" strokeType="OUTSIDE" strokeWidth="0.0" text="Wybierz zagęszczenie" />
+      <ChoiceBox id="compaction" fx:id="compaction" prefWidth="150.0" value="MID" />
+      <Text fx:id="chLan" strokeType="OUTSIDE" strokeWidth="0.0" text="Wybierz jezyk" />
+      <GridPane prefHeight="42.0" prefWidth="206.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="polish" alignment="CENTER" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#changeLangToPL" prefHeight="26.0" prefWidth="102.0" text="polski" />
+            <Button fx:id="english" mnemonicParsing="false" onAction="#changeLangToEN" prefHeight="26.0" prefWidth="102.0" text="angielski" GridPane.columnIndex="1" />
+         </children>
+      </GridPane>
+      <Button fx:id="zatwierdz" mnemonicParsing="false" onAction="#changeScene" text="zatwierz" />
+      <Button fx:id="load" mnemonicParsing="false" onAction="#load" text="Wczytaj" />
+      <Button fx:id="dataBaseLoad" mnemonicParsing="false" onAction="#dataBasaLoading" text="Wczytaj z bazy danych" />
+      <Text fx:id="authors" strokeType="OUTSIDE" strokeWidth="0.0" />
+   </children>
+
+</VBox>
